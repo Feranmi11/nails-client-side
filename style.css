@@ -14,7 +14,7 @@
 }
 
 .site_header {
-    background: linear-gradient( rgba(187, 218, 235, 0.844), rgba(243, 240, 240, 0.73)), url(images/background.jpg);
+    background-image: url(images/ines-bahr-sgxhA2BcJCQ-unsplash.jpg);
     background-size: cover;
     min-height: 100vh;
     background-repeat: no-repeat;
@@ -50,16 +50,23 @@ li a {
     margin-top: 50px;
     text-align: center;
 }
-.site_phrase p{
+.site_phrase h2{
     padding: 50px;
     text-align: center;
     font-size: 3em;
 }
-
+.site_phrase p{
+    font-size: 20px;
+    /* width: 600px; */
+    margin: 15px auto;
+    /* text-align: center; */
+}
 .btn {
     font-size: 1em;
     padding: 10px;
     background-color: rgb(49, 113, 140);
+    border-radius: 9px;
+    border: none;
 }
 .btn:hover{
     transition: 0.5s ease-in-out;
