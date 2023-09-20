@@ -14,6 +14,11 @@
     align-items: center;
     padding: 20px;
     background-color: #fff;
+    overflow: hidden;
+    background-color:#fff;
+    position: -ms-page; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
 }
 
 .site_header {
@@ -52,21 +57,18 @@ li a {
     color: black;
 }
 .phrase{
-    margin-top: 50px;
+    margin: 100px auto;
     text-align: center;
 }
 .site_phrase h2{
-    padding: 50px;
-    text-align: center;
+    padding: 50px 0 0 0;
     font-size: 3em;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
 }
 .site_phrase p{
     font-size: 20px;
-    /* width: 600px; */
-    margin: 15px auto;
-    /* text-align: center; */
+    padding-bottom: 20px;
 }
 .btn {
     font-size: 1em;
@@ -100,7 +102,7 @@ h2 {
 
 .intro_content_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
     padding: 20px;
@@ -112,7 +114,7 @@ h2 {
     width: 100%;
 }
 span{
-    font-size: 20px;
+    font-size: 30px;
     color: palevioletred;
 }
 
