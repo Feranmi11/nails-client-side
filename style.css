@@ -8,21 +8,28 @@
     font-family: 'Lato', sans-serif;
 }
 
+body {
+    background-color: white;
+}
+
+
 /* navbar styling */
 .navbar {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     background-color: #fff;
-    overflow: hidden;
-    background-color: #fff;
-    position: -ms-page;
-    /* Set the navbar to fixed position */
-    top: 0;
-    /* Position the navbar at the top of the page */
-    width: 100%;
-    /* Full width */
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar a:hover {
+    text-decoration: underline pink;
 }
 
 .site_header {
@@ -33,6 +40,7 @@
     min-height: 100vh;
     background-repeat: no-repeat;
     /* object-fit: cover; */
+    width: 100%;
 }
 
 .site_logo {
@@ -70,7 +78,7 @@ li a {
     padding: 50px 0 0 0;
     font-size: 3em;
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 
 .site_phrase p {
@@ -81,16 +89,40 @@ li a {
 .btn {
     font-size: 1em;
     padding: 10px;
-    background-color: rgb(238, 240, 241);
+    background-color: #aaa1a8;
     border-radius: 9px;
     border: none;
 }
 
 .btn:hover {
-    transition: 0.5s ease-in-out;
     cursor: pointer;
-    background-color: palevioletred;
-    color: #fff;
+    background-color: #dfdce3;
+    color: #030303;
+}
+@media (max-width: 600px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .site_phrase h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .site_phrase h2 {
+        font-size: 20px;
+    }
 }
 
 /* Introduction/About */
@@ -101,14 +133,11 @@ li a {
 
 h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     font-family: inherit;
 }
 
-.intro_content h2 {
-    text-decoration: underline;
-    color: palevioletred;
-}
+.intro_content h2 {}
 
 .intro_content_container {
     display: flex;
@@ -145,11 +174,13 @@ span {
 }
 
 /* service section */
+.service_section {
+    height: 100vh;
+}
+
 .service_content h2 {
     text-align: center;
-    font-size: 40px;
-    text-decoration: underline;
-    color: palevioletred;
+    font-size: 50px;
 }
 
 .all_cards {
@@ -203,8 +234,8 @@ button {
 }
 
 button:hover {
-    background-color: palevioletred;
-    color: white;
+    background-color: #cbb0ee;
+    color: black;
     transition: .5s;
     cursor: pointer;
 }
@@ -213,39 +244,146 @@ button:hover {
 .gallery_sect {
     height: 100vh;
     padding: 0%;
+    margin-bottom: 250px;
 }
 
-.gallery_container {
+.gallery_row {
     display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 0%;
-    justify-content: center;
-    flex-direction: row;
+    padding: 4px 0;
     flex-wrap: wrap;
-    margin: 2%;
-}
-.gallery_content h2{
-    text-align: center;
-    font-size: 40px;
-    color: palevioletred;
-    text-decoration: underline;
+
 }
 
-.work_img {
-    max-width: 400px;
-    padding: 20px;
-    border: 2px;
-    border-radius: 10px;
-    width: 100%;
-    box-shadow: 5px;
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 4px 0;
+}
+
+.gallery_content h2 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20px;
 }
 
 .gallery_img {
+    margin-top: 8px;
+    vertical-align: middle;
     width: 100%;
-    height: 200px;
-    object-fit: contain;
-    
+}
+
+/* shop section  */
+.shop_text {
+    /* font-size: 20px; */
+    text-align: center;
+    padding: 50px;
+}
+
+.shop_text h2 {
+    font-size: 80px;
+}
+
+.shop_text p {
+    font-size: 40px;
+}
+
+.shops {
+    padding: 80px;
+    margin: 100px auto;
+    width: 100%;
+    background-color: rgb(206, 127, 172);
+    height: 100vh;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+.shop_btn {
+    background-color: rgb(206, 127, 172);
+    width: 100px;
+    font-size: 15px;
+}
+
+.shop_btn:hover {
+    background-color: #5b2647;
+    color: #fff;
+}
+
+/* contact section */
+.contact_section {
+    width: 50%;
+    border-radius: 5px;
+    margin: 100px auto;
+    height: 100vh;
+
+}
+
+.container {
+    padding: 30px;
+    margin-top: 100px auto;
+    width: 500px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 80px;
+}
+
+input[type=text],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 2px solid rgb(214, 152, 201);
+    border-radius: 5px;
+    outline: invert;
+    background-color: #dfdce3;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 2px solid rgb(214, 152, 201);
+    border-radius: 5px;
+    outline: invert;
+    background-color: #dfdce3;
+}
+
+input[type=submit] {
+    background-color: white;
+    padding: 12px 20px;
+    border: 1px solid;
+    cursor: pointer;
+    margin-left: 160px;
+    border-radius: 2px;
+}
+
+input[type=submit]:hover {
+    background-color: #5b2647;
+    color: white;
+}
+
+.text_place {
+    margin: 50px;
+    color: #230123;
 }
 
 
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+    .column,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/* footer */
+footer {
+    padding: 3px;
+    background-color: rgb(31, 27, 30);
+    height: 50vh;
+
+}
+
+footer p {
+    text-decoration: underline;
+}
